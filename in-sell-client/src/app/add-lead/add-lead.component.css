@@ -1,0 +1,48 @@
+.form-check, label{
+font-size: 20px;
+line-height: 1.42857;
+color: #000000;
+font-weight: bolder;
+}
+
+.modal-title{
+    font-size: xx-large;
+    color: purple;
+    font-weight: 500;
+}
+
+.form-control, label, input::placeholder {
+    line-height: 1.1;
+    font-size: large;
+}
+
+select, select.form-control {
+    width: 100%;
+    -webkit-appearance: auto;
+    font-size: 20px;
+}
+
+.modal-header {
+    padding: 2rem;
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+.form-group {
+    margin: 1rem 0;
+}
+
+.input-group {
+    align-items: center;
+}
+
+.fa-calendar:before {
+    font-size: 10px;
+}
+
+.error{
+    color: red;
+    font-size: 10px;
+}

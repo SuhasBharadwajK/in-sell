@@ -1,0 +1,296 @@
+<div class="main-content">
+  <div class="col">
+    <div ngbDropdown class="d-inline-block">
+      <button
+        class="btn btn-outline-primary"
+        id="dropdownBasic1"
+        ngbDropdownToggle
+      >
+        Filter
+      </button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button ngbDropdownItem>New</button>
+        <button ngbDropdownItem>InProgress</button>
+
+        <button ngbDropdownItem>Rejected</button>
+
+        <button ngbDropdownItem>Discarded</button>
+
+        <button ngbDropdownItem>Converted</button>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-danger">
+            <h4 class="card-title">Leads</h4>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table">
+                <thead class="text-primary">
+                  <th>Date Added</th>
+                  <th>Practice</th>
+                  <th>Campaign</th>
+                  <th>Company Name</th>
+                  <th>First Name</th>
+                  <th>Middle Name</th>
+                  <th>Last Name</th>
+                  <th>Industry</th>
+                  <th>Designation</th>
+                  <th>Phone Number</th>
+                  <th>Email</th>
+                  <th>Revenue</th>
+                  <th>LinkedIn Profile</th>
+                  <th>Source</th>
+                  <th>Country</th>
+                  <th>State</th>
+                  <th>Company Website</th>
+                  <th>Status</th>
+                  <th>Update Status</th>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let lead of leads">
+                    <td>
+                      {{ lead.addedOn }}
+                    </td>
+                    <td>
+                      {{ lead.company.industry }}
+                    </td>
+                    <td>
+                      {{ lead.company.industry }}
+                    </td>
+
+                    <td>
+                      {{ lead.company.name }}
+                    </td>
+                    <td>
+                      {{ lead.bdr.firstName }}
+                    </td>
+                    <td>
+                      {{ lead.bdr.middleName }}
+                    </td>
+                    <td>
+                      {{ lead.bdr.lastName }}
+                    </td>
+                    <td>
+                      {{ lead.company.industry }}
+                    </td>
+                    <td>
+                      {{ lead.contact.designation }}
+                    </td>
+                    <td>
+                      {{ lead.contact.phone }}
+                    </td>
+                    <td>
+                      {{ lead.contact.email }}
+                    </td>
+                    <td>
+                      {{ lead.company.revenue }}
+                    </td>
+                    <td>
+                      {{ lead.contact.linkedInLink }}
+                    </td>
+                    <td>
+                      {{ lead.source }}
+                    </td>
+                    <td>
+                      {{ lead.company.country }}
+                    </td>
+                    <td>
+                      {{ lead.company.state }}
+                    </td>
+                    <td>
+                      {{ lead.company.website }}
+                    </td>
+                    <td>{{ lead.status }}</td>
+                    <td>
+                      <div class="dropdown">
+                        <button
+                          type="button"
+                          class="btn btn-outline-secondary"
+                          id="dropdownMenuButton"
+                          data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-three-dots-vertical"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"
+                            ></path>
+                          </svg>
+                        </button>
+                        <div
+                          class="dropdown-menu"
+                          aria-labelledby="dropdownMenuButton"
+                        >
+                          <button class="dropdown-item" type="button">
+                            New
+                          </button>
+                          <button class="dropdown-item" type="button">
+                            InProgress
+                          </button>
+                          <button class="dropdown-item" type="button">
+                            Discarded
+                          </button>
+                          <button class="dropdown-item" type="button">
+                            Converted
+                          </button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="col-md-12">
+                <div class="card card-plain">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title mt-0">Leads List</h4>
+                        <p class="card-category"> Here is a subtitle for this table</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead class="">
+                                    <th>
+                                        BDR
+                                    </th>
+                                    <th>
+                                        Date Added
+                                    </th>
+                                    <th>
+                                        Practice
+                                    </th>
+                                    <th>
+                                        Campaign
+                                    </th>
+                                    <th>
+                                        Company Name
+                                    </th>
+                                    <th>
+                                        First Name
+                                    </th>
+                                    <th>
+                                        Middle Name
+                                    </th>
+                                    <th>
+                                        Last Name
+                                    </th>
+                                    <th>
+                                        Industry
+                                    </th>
+                                    <th>
+                                        Designation
+                                    </th>
+                                    <th>
+                                        Phone Number
+                                    </th>
+                                    <th>
+                                        Email
+                                    </th>
+                                    <th>
+                                        Revenue
+                                    </th>
+                                    <th>
+                                        LinkedIn Profile
+                                    </th>
+                                    <th>
+                                        Source
+                                    </th>
+                                    <th>
+                                        Country
+                                    </th>
+                                    <th>
+                                        State
+                                    </th>
+                                    <th>
+                                        Company Website
+                                    </th>
+                                    <th>
+                                        Status
+                                    </th>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let lead of leads">
+                                        <td>
+                                            {{lead.bDR}}
+                                        </td>
+                                        <td>
+                                            {{lead.dateAdded}}
+                                        </td>
+                                        <td>
+                                            {{lead.practice}}
+                                        </td>
+                                        <td>
+                                            {{lead.practice}}
+                                        <td>
+                                            {{lead.campaign}}
+                                        </td>
+                                        <td>
+                                            {{lead.companyName}}
+                                        </td>
+                                        <td>
+                                            {{lead.firstName}}
+                                        </td>
+                                        <td>
+                                            {{lead.middleName}}
+                                        </td>
+                                        <td>
+                                            {{lead.lastName}}
+                                        </td>
+                                        <td>
+                                            {{lead.industry}}
+                                        </td>
+                                        <td>
+                                            {{lead.designation}}
+                                        </td>
+                                        <td>
+                                            {{lead.phoneNumber}}
+                                        </td>
+                                        <td>
+                                            {{lead.email}}
+                                        </td>
+                                        <td>
+                                            {{lead.revenue}}
+                                        </td>
+                                        <td>
+                                            {{lead.linkedIn}}
+                                        </td>
+                                        <td>
+                                            {{lead.source}}
+                                        </td>
+                                        <td>
+                                            {{lead.country}}
+                                        </td>
+                                        <td>
+                                            {{lead.state}}
+                                        </td>
+                                        <td>
+                                            {{lead.companyWebsite}}
+                                        </td>
+                                        <td>
+                                            {{lead.status}}
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+    </div>
+  </div>
+</div>

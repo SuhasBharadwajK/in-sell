@@ -1,0 +1,245 @@
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Lead Details Form</h4>
+    <button
+      type="button"
+      class="close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    >
+      <span aria-hidden="true"> × </span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="leadForm">
+      <div class="form-group">
+        <label for="campaign" class="form-label">Campaign</label>
+        <input
+          type="text"
+          class="form-control"
+          id="campaign"
+          placeholder="Enter campaign"
+          formControlName="campaign"
+        />
+        <span
+          class="error"
+          *ngIf="form.campaign.invalid && form.campaign.touched"
+          >Campaign is invalid</span
+        >
+      </div>
+      <div class="form-group">
+        <label for="firstName" class="form-label">First Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="firstName"
+          placeholder="Enter first name"
+          formControlName="firstName"
+        />
+        <span
+          class="error"
+          *ngIf="form.firstName.invalid && form.firstName.touched"
+          >First Name is invalid</span
+        >
+      </div>
+      <div class="form-group">
+        <label for="middleName" class="form-label">Middle Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="middleName"
+          placeholder="Enter middle name"
+          formControlName="middleName"
+        />
+        <span
+          class="error"
+          *ngIf="form.middleName.invalid && form.middleName.touched"
+          >Middle Name is invalid</span
+        >
+      </div>
+      <div class="form-group">
+        <label for="lastName" class="form-label">Last Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="lastName"
+          placeholder="Enter last name"
+          formControlName="lastName"
+        />
+        <span
+          class="error"
+          *ngIf="form.lastName.invalid && form.lastName.touched"
+          >Last Name is invalid</span
+        >
+      </div>
+      <div class="form-group">
+        <label for="industry" class="form-label">Industry</label>
+        <input
+          type="text"
+          class="form-control"
+          id="industry"
+          placeholder="Enter industry"
+          formControlName="industry"
+        />
+        <span
+          class="error"
+          *ngIf="form.industry.invalid && form.industry.touched"
+          >Industry is invalid</span
+        >
+      </div>
+      <div class="form-group">
+        <label for="designation" class="form-label">Designation</label>
+        <input
+          type="text"
+          class="form-control"
+          id="designation"
+          placeholder="Enter designation"
+          formControlName="designation"
+        />
+        <span
+          class="error"
+          *ngIf="form.designation.invalid && form.designation.touched"
+          >Designation is invalid</span
+        >
+      </div>
+      <div class="form-group">
+        <label for="phoneNumber" class="form-label">Phone Number</label>
+        <input
+          type="text"
+          class="form-control"
+          id="phoneNumber"
+          placeholder="Enter phone number"
+          formControlName="phoneNumber"
+        />
+        <span
+          class="error"
+          *ngIf="form.phoneNumber.invalid && form.phoneNumber.touched"
+          >Phone Number is invalid</span
+        >
+      </div>
+      <div class="form-group">
+        <label for="email" class="form-label">Email address</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          aria-describedby="emailHelp"
+          placeholder="Enter email"
+          formControlName="email"
+        />
+        <span class="error" *ngIf="form.email.invalid && form.email.touched"
+          >Email address is invalid</span
+        >
+      </div>
+      <div class="form-group">
+        <label for="revenue" class="form-label">Revenue</label>
+        <input
+          type="text"
+          class="form-control"
+          id="revenue"
+          placeholder="Enter revenue"
+          formControlName="revenue"
+        />
+        <span class="error" *ngIf="form.revenue.invalid && form.revenue.touched"
+          >Revenue is invalid</span
+        >
+      </div>
+      <div class="form-group">
+        <label for="linkedIn" class="form-label">LinkedIn Profile Link </label>
+        <input
+          type="text"
+          class="form-control"
+          id="linkedIn"
+          placeholder="Enter linkedIn profile link"
+          formControlName="linkedIn"
+        />
+        <span
+          class="error"
+          *ngIf="form.linkedIn.invalid && form.linkedIn.touched"
+          >LinkedIn Profile Link is invalid</span
+        >
+      </div>
+      <div class="form-group">
+        <label for="source" class="form-label">Source</label>
+        <input
+          type="text"
+          class="form-control"
+          id="source"
+          placeholder="Enter source"
+          formControlName="source"
+        />
+        <span class="error" *ngIf="form.source.invalid && form.source.touched"
+          >Source is invalid</span
+        >
+      </div>
+      <div class="form-group">
+        <label for="state" class="form-label">State</label>
+        <input
+          type="text"
+          class="form-control"
+          id="state"
+          placeholder="Enter state"
+          formControlName="state"
+        />
+        <span class="error" *ngIf="form.state.invalid && form.state.touched"
+          >State is invalid</span
+        >
+      </div>
+      <div class="form-group">
+        <label for="country" class="form-label">Country</label>
+        <input
+          type="text"
+          class="form-control"
+          id="country"
+          placeholder="Enter country"
+          formControlName="country"
+        />
+        <span class="error" *ngIf="form.country.invalid && form.country.touched"
+          >Country is invalid</span
+        >
+      </div>
+      <div class="form-group">
+        <label for="companyWebsite" class="form-label">Company Website</label>
+        <input
+          type="text"
+          class="form-control"
+          id="companyWebsite"
+          placeholder="Enter company website"
+          formControlName="companyWebsite"
+        />
+        <span
+          class="error"
+          *ngIf="form.companyWebsite.invalid && form.companyWebsite.touched"
+          >Company Website is invalid</span
+        >
+      </div>
+      <div class="form-group">
+        <label for="status" class="form-label">Status</label>
+        <select class="form-select" id="status" formControlName="status">
+          <option selected disabled value="">Choose...</option>
+          <option value="New">New</option>
+          <option value="InProgress">InProgress</option>
+          <option value="Rejected">Rejected</option>
+          <option value="Discarded">Discarded</option>
+          <option value="Converted">Converted</option>
+        </select>
+        <span class="error" *ngIf="form.status.invalid && form.status.touched"
+          >Status is invalid</span
+        >
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-primary btn-outline-dark"
+      (click)="save()"
+    >
+      Save
+    </button>
+  </div>
+</ng-template>
+
+<button class="btn btn-lg btn-outline-primary" (click)="open(content)">
+  Add Lead
+</button>
